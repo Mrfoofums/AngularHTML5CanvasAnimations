@@ -23,4 +23,6 @@ export class Particle implements HTML5CanvasObject {
    update(c:CanvasRenderingContext2D){
     this.draw(c)
    }
+
+   
 }
