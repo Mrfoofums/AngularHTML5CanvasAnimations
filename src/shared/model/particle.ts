@@ -1,4 +1,6 @@
-export class Particle {
+import { HTML5CanvasObject } from "../../app/interface/html5-canvas-object";
+
+export class Particle implements HTML5CanvasObject {
     x:number;
     y:number;
     radius:number;
