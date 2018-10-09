@@ -9,9 +9,10 @@ export class GeneratorsService {
   constructor() { }
    colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']
 
-  randomParticle(x :number, y:number, radius:number, sizeOfSim:number ){
-    let distanceFromCenter = this.randomIntFromRange(4,sizeOfSim);
+  randomParticle(x :number, y:number, radius:number, distanceFromCenter:number ){
+    
     let color = this.randomColor(this.colors)
+    distanceFromCenter = this.randomIntFromRange(0,distanceFromCenter);
 
     return new Particle(x, y,radius,distanceFromCenter, color);
   }

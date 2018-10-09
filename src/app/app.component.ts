@@ -12,7 +12,7 @@ export class AppComponent implements AnimationComponent {
   particles: Array<Particle>;
 
 
-  constructor(private service:AnimationService){
+  constructor(){
     // super();
     this.particles = [];
     

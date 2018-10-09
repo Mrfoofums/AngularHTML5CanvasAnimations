@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HTML5CanvasObject } from '../interface/html5-canvas-object';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class AnimationService {
   canvas: any;
   context:CanvasRenderingContext2D;
@@ -12,8 +9,8 @@ export class AnimationService {
   canvasHeight: number;
 
   setUpCanvasAndContext(containerId:string){
-    this.canvasWidth = document.getElementById('container').offsetWidth;
-    this.canvasHeight = document.getElementById('container').offsetHeight;
+    this.canvasWidth = document.getElementById(containerId).offsetWidth;
+    this.canvasHeight = document.getElementById(containerId).offsetHeight;
 
     this.canvas = document.querySelector('canvas');
     this.canvas.setAttribute('width',this.canvasWidth);
@@ -34,7 +31,7 @@ export class AnimationService {
 
   updateObjects(objects:Array<HTML5CanvasObject>){
     objects.forEach(obj=>{
-      console.log(obj);
+      // console.log(obj);
       obj.update(this.context);
     })
   }
