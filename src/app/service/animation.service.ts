@@ -34,6 +34,7 @@ export class AnimationService {
 
   updateObjects(objects:Array<HTML5CanvasObject>){
     objects.forEach(obj=>{
+      console.log(obj);
       obj.update(this.context);
     })
   }
