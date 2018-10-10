@@ -26,7 +26,6 @@ export class AnimationService {
 
     //Updaet everything
     this.updateObjects(objects);
-    console.log('animating')
   }
 
   updateObjects(objects:Array<HTML5CanvasObject>){

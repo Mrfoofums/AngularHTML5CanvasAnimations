@@ -9,27 +9,27 @@ export class GeneratorsService {
   constructor() { }
    colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']
 
-  randomParticle(x :number, y:number, radius:number, distanceFromCenter:number ){
-    
-    let color = this.randomColor(this.colors)
-    distanceFromCenter = this.randomIntFromRange(0,distanceFromCenter);
+  randomParticle(x: number, y: number, radius: number, minDist:number, maxDist:number ) {
 
-    return new Particle(x, y,radius,distanceFromCenter, color);
+    const color = this.randomColor(this.colors);
+    const distanceFromCenter = this.randomIntFromRange(minDist, maxDist);
+    const r = this.randomIntFromRange(radius, 7);
+    return new Particle(x, y, r, distanceFromCenter, color);
   }
 
    randomIntFromRange(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
  randomColor(colors) {
-    return colors[Math.floor(Math.random() * colors.length)]
+    return colors[Math.floor(Math.random() * colors.length)];
 }
 
  distance(x1, y1, x2, y2) {
-    const xDist = x2 - x1
-    const yDist = y2 - y1
+    const xDist = x2 - x1;
+    const yDist = y2 - y1;
 
-    return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2))
+    return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
   }
 
 }
