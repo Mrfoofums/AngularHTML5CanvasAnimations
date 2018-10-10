@@ -9,12 +9,12 @@ export class GeneratorsService {
   constructor() { }
    colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']
 
-  randomParticle(x: number, y: number, radius: number, minDist:number, maxDist:number ) {
+  randomParticle(x: number, y: number, minRadius: number, maxRadius:number, minDist:number, maxDist:number ) {
 
     const color = this.randomColor(this.colors);
     const distanceFromCenter = this.randomIntFromRange(minDist, maxDist);
-    const r = this.randomIntFromRange(radius, 7);
-    return new Particle(x, y, r, distanceFromCenter, color);
+    const radius = this.randomIntFromRange(minRadius, maxRadius);
+    return new Particle(x, y, radius, distanceFromCenter, color);
   }
 
    randomIntFromRange(min, max) {

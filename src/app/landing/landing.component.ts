@@ -19,12 +19,13 @@ export class LandingComponent implements OnInit, AnimationComponent {
    }
 
   init() {
-    for (let i = 0; i < 100; i++) {
-      const radius = 3;
-      const max = 245;
-      const min = 50;
+    for (let i = 0; i < 500; i++) {
+      const minRadius = 1;
+      const maxRadius = 3;
+      const max = 545;
+      const min = 30;
       // tslint:disable-next-line:max-line-length
-      this.particles.push(this.gen.randomParticle(this.animation.canvasWidth / 2, this.animation.canvasHeight / 2, radius, min, max));
+      this.particles.push(this.gen.randomParticle(this.animation.canvasWidth / 2, this.animation.canvasHeight / 2, minRadius, maxRadius, min, max));
     }
   }
   ngOnInit() {

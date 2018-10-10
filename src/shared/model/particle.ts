@@ -31,7 +31,7 @@ export class Particle implements HTML5CanvasObject {
 
        this.radius = radius;
        this.color = color;
-       this.velocity = this.distanceFromCenter * .0001;
+       this.velocity = this.distanceFromCenter * .00008;
    }
    
    draw(c:CanvasRenderingContext2D){
