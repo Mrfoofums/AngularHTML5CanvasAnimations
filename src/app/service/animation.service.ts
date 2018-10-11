@@ -34,4 +34,13 @@ export class AnimationService {
       obj.update(this.context);
     })
   }
+
+  getMaximumRadiusForCenteredSphere():number{
+    if(this.canvasWidth < this.canvasHeight){
+      return this.canvasWidth/2
+    }
+    else{
+      return this.canvasHeight/2
+    }
+  }
 }

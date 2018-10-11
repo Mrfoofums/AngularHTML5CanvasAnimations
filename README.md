@@ -5,7 +5,9 @@ Relying on this project assumes you understand Angular as well as basic canvas a
 
 ## Getting started
 1. Clone the project with your own name doing `git clone git@github.com:Mrfoofums/AngularHTML5CanvasAnimations.git my-own-project`
-2. cd into your project folder and Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2. do `npm install` in your project directory
+3.  Run `ng serve` for a dev server.
+4. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
 ## Basic Structure

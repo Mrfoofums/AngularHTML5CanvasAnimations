@@ -1,6 +1,6 @@
 import { HTML5CanvasObject } from '../../app/interface/html5-canvas-object';
 
-export class Particle implements HTML5CanvasObject {
+export class Sphere implements HTML5CanvasObject {
     x:number;
     y:number;
     xCenter:number;
@@ -14,10 +14,14 @@ export class Particle implements HTML5CanvasObject {
 
     counter = Math.random() * Math.PI * 2;
     velocity:number;
-    distanceFromCenter:number;
 
-   constructor(x:number, y:number, radius:number, distanceFromCenter:number, color:string ){
-       this.distanceFromCenter = distanceFromCenter;
+    distanceFromCenter:number;
+    velocityFactor:number;
+
+   constructor(x:number, y:number, radius:number, distanceFromCenter:number, velocityFactor:number, color:string ){
+        this.distanceFromCenter = distanceFromCenter;
+        this.velocityFactor = velocityFactor
+
        this.xCenter = x;
        this.yCenter = y;
 
@@ -29,7 +33,7 @@ export class Particle implements HTML5CanvasObject {
 
        this.radius = radius;
        this.color = color;
-       this.velocity = this.distanceFromCenter * .000005
+       this.velocity = this.distanceFromCenter * velocityFactor
        ;
    }
    
@@ -42,13 +46,7 @@ export class Particle implements HTML5CanvasObject {
     }
 
    update(c:CanvasRenderingContext2D){
-    this.counter += this.velocity;
-
-    // Circluar motion
-    this.x = this.lastX + Math.cos(this.counter) * this.distanceFromCenter;
-    this.y = this.lastY + Math.sin(this.counter) * this.distanceFromCenter;
-
-       // Then Draw It
+  
        this.draw(c)
    }
 }
