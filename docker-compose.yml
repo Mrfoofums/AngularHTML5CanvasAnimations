@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  jekyll:
+    image: registry.gitlab.com/mrfoofums/fk.io:latest
+    expose:
+      - 80
+    environment:
+       VIRTUAL_HOST: forrestknight.io, www.forrestknight.io
+    restart: always
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
