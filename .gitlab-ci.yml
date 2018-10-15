@@ -22,7 +22,6 @@ before_script:
 docker-build:
   stage: build
   script:
-    - cd angularVersion
     - docker build . -t registry.gitlab.com/mrfoofums/fk:latest
     - docker push registry.gitlab.com/mrfoofums/fk:latest
 
