@@ -20,9 +20,9 @@ export class LandingComponent implements OnInit, AnimationComponent {
    }
 
   init() {
-    for (let i = 0; i < 2000; i++) {
-      const minRadius = 5;
-      const maxRadius = 35;
+    for (let i = 0; i < 1000; i++) {
+      const minRadius = 1;
+      const maxRadius = 5;
       const max = this.animation.getMaximumRadiusForCenteredSphere();
       const min = 130;
       // tslint:disable-next-line:max-line-length

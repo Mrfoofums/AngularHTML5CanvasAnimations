@@ -26,6 +26,9 @@ export class AnimationService {
 
     //Updaet everything
     this.updateObjects(objects);
+    this.context.font = "30px Open Sans";
+    this.context.textAlign='center';
+    this.context.fillText("Forrest Knight",this.canvasWidth/2,this.canvasHeight/2);
   }
 
   updateObjects(objects:Array<HTML5CanvasObject>){
