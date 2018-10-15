@@ -14,7 +14,7 @@ stages:
 
 before_script:
   - docker info
-  - apt-get install npm && npm install
+  - yum install nodejs npm
   - npm run build --prod
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
 
